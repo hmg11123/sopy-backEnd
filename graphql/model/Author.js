@@ -8,6 +8,7 @@ const Author = new Schema(
    type: String,
    required: true,
   },
+
   birth: {
    type: String,
    required: true,
@@ -16,12 +17,16 @@ const Author = new Schema(
    type: String,
    required: true,
   },
-  artList: {
-   type: mongoose.Schema.Types.ObjectId,
-   ref: `Book`,
-  },
+  artList: [
+   {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: `Book`,
+   },
+  ],
  },
- { versionKey: false }
+ {
+  versionKey: false,
+ }
 );
 
 export default mongoose.model(`Author`, Author, `Author`);

@@ -1,4 +1,4 @@
 type Query {
  getAllBooks: [Book!]!
- getOneBook(title: String!): Book!
+ getOneBook(name: String!): Book!
 }

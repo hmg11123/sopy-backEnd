@@ -1,11 +1,14 @@
 import Book from "../../../model/Book";
+import Author from "../../../model/Author";
 
 export default {
  Query: {
   getAllBooks: async (_, args) => {
    try {
-    const result = await Book.find();
-
+    const result = await Book.find().populate({
+     path: `author`,
+     model: Author,
+    });
     return result;
    } catch (e) {
     console.log(e);

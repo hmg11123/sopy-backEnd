@@ -3,7 +3,7 @@ type Student {
  name: String!
  age: Int!
  school: String!
- modile: String!
+ mobile: String!
  gender: String!
  lecture: [Lecture!]!
 }
@@ -22,7 +22,7 @@ type Author {
  name: String!
  birth: String!
  company: String!
- artList: [Book]!
+ artList: [Book!]!
 }
 
 type Book {
