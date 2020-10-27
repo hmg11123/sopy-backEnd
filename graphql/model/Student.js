@@ -25,6 +25,12 @@ const Student = new Schema(
    type: String,
    required: true,
   },
+  lecture: [
+   {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: `Lecture`,
+   },
+  ],
  },
  {
   versionKey: false,
