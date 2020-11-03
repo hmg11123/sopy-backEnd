@@ -1,4 +1,6 @@
 type Query {
  getAllBooks: [Book!]!
  getOneBook(name: String!): Book!
+
+ searchBook(title: String!): [Book!]!
 }

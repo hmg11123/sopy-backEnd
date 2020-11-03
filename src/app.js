@@ -7,23 +7,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import schema from "../graphql/schemas";
 import connect from "../db/mongo";
-import Snack from "../graphql/model/Snack";
 
 const app = express();
 
 app.set(`PORT`, process.env.PORT);
 app.use(morgan(`dev`));
 connect();
-
-// app.get("/graphql", async (req, res) => {
-//  const result = await Snack.find(
-//   {
-//    age: { $lte: 1000, $gte: 1000000 },
-//   },
-//   {}
-//  );
-//  res.send(result);
-// });
 
 app.use(
  "/graphql",

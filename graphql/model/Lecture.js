@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
+// 객체는 대문자로 시작
 
 const Lecture = new Schema(
  {
