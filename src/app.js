@@ -7,6 +7,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import schema from "../graphql/schemas";
 import connect from "../db/mongo";
+import { generateSecretCode } from "./words";
 
 const app = express();
 
