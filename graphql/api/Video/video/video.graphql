@@ -1,0 +1,16 @@
+type Query {
+ seeAllVideos: [Video!]!
+ seeDetailVideo(id: String!): Video!
+ seeVideosByUser(id: String!): User!
+ seachVideosByTitle(sTitle: String!): [Video!]!
+}
+
+type Mutation {
+ uploadVideo(
+  thumbnailPath: String!
+  title: String!
+  description: String!
+  videoPath: String!
+  loginEmail: String!
+ ): Boolean!
+}

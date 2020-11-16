@@ -55,4 +55,25 @@ type User {
  mobile: String!
  secretCode: String!
  createdAt: String!
+ videos: [Video!]!
+}
+
+type Video {
+ _id: ID!
+ thumbnailPath: String!
+ title: String!
+ description: String!
+ videoPath: String!
+ createdAt: String!
+ hit: Int!
+ likes: [User!]!
+ comments: [Comment!]!
+ author: User!
+}
+
+type Comment {
+ _id: ID!
+ description: String!
+ author: User!
+ createdAt: String
 }
