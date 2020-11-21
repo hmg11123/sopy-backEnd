@@ -30,6 +30,12 @@ const User = new Schema(
     ref: "Video",
    },
   ],
+  comments: [
+   {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Comment",
+   },
+  ],
  },
  { versionKey: false }
 );
