@@ -1,80 +1,20 @@
-type Student {
- _id: ID!
- name: String!
- age: Int!
- school: String!
- mobile: String!
- gender: String!
- lecture: [Lecture!]!
-}
-
-type Lecture {
- _id: ID!
- name: String!
- teacher: String!
- lv: Int!
- location: String!
- pay: Int!
-}
-
-type Author {
- _id: ID!
- name: String!
- birth: String!
- company: String!
- artList: [Book!]!
-}
-
-type Book {
- _id: ID!
+type Video {
+ thumbnailPath: String!
  title: String!
- summary: String!
- author: Author!
- published: String!
- price: Int!
- type: String!
-}
-
-type Company {
- _id: ID!
- name: String!
- startDate: String!
- snackList: [Snack!]!
-}
-
-type Snack {
- _id: ID!
- name: String!
- price: Int!
+ description: String!
 }
 
 type User {
  _id: ID!
- email: String!
  name: String!
  mobile: String!
- secretCode: String!
+ email: String!
+ nickName: String!
+ zoneCode: String!
+ address: String!
+ detailAddress: String!
  createdAt: String!
  videos: [Video!]!
- comments: [Comment!]!
-}
-
-type Video {
- _id: ID!
- thumbnailPath: String!
- title: String!
- description: String!
- videoPath: String!
- createdAt: String!
- hit: Int!
- likes: [User!]!
- comments: [Comment!]!
- author: User!
-}
-
-type Comment {
- _id: ID!
- description: String!
- author: User!
- createdAt: String
+ subscribeForMe: [User!]!
+ subscribeToOther: [User!]!
 }

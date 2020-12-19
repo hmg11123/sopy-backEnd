@@ -1,5 +1,0 @@
-type Mutation {
- createUser(email: String!, name: String!, mobile: String!): Boolean!
- loginUser(email: String!): Boolean!
- comfirmSecret(secret: String!, email: String!): User!
-}
