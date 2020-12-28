@@ -13,7 +13,6 @@ type User {
  zoneCode: String!
  address: String!
  detailAddress: String!
- createdAt: String!
  videos: [Video!]!
  subscribeForMe: [User!]!
  subscribeToOther: [User!]!
